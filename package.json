@@ -1,0 +1,13 @@
+{
+  "name": "mySite",
+  "version": "0.0.0",
+  "description": "Arnav's personal website",
+  "main": "app.js",
+  "author": "Arnav Aggarwal",
+  "devDependencies": {
+
+  },
+  "dependencies": {
+    
+  }
+}
