@@ -7,11 +7,41 @@ angular.module('app', [])
 
   $scope.execute = function(){
     const raw = $scope.changeLoops($scope.data.userCode);
-    console.log(raw);
+    console.log('raw:' , raw);
     //insert let loopChecker = 0; && loopChecker++ <= 1000;
-    
+    const regex = /for\(/;
+    console.log(raw.match(regex).input)
   };
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // .config(function($routeProvider){
