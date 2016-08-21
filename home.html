@@ -1,15 +1,12 @@
-
-      <!-- <textarea rows="50" cols="80" ng-model="data.userJS" placeholder="Enter your JavaScript here"> -->
-
-
-<html ng-app="app">
-  <body>
-    <div ng-controller="MainController">
-      <div ng-controller="ChildController">
-        <h1>{{data.text}}</h1>
-      </div>
-      <script src="angular.min.js"></script>
-      <script src="app.js"></script>
-    </div>
+<!DOCTYPE html>
+<html>
+  <script src="angular.min.js"></script>
+  <script src="app.js"></script>
+  <body ng-app="app" ng-controller="MainController">
+    <form ng-submit="execute()">
+      <textarea rows="20" cols="80" type="text" placeholder="Enter your JavaScript here" ng-model="data.userCode" ></textarea><br>
+      <input type="submit" value="Submit">
+      <h1>User's code: {{data.userCode}}</h1>
+    </form>
   </body>
 </html>
