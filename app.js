@@ -6,11 +6,19 @@ angular.module('app', [])
   };
 
   $scope.execute = function(){
-    const raw = $scope.changeLoops($scope.data.userCode);
-    console.log('raw:' , raw);
+    const userCode = $scope.changeLoops($scope.data.userCode);
+
     //insert let loopChecker = 0; && loopChecker++ <= 1000;
-    const regex = /for\(/;
-    console.log(raw.match(regex).input)
+    const forLoopRegex = /for\(/;
+    const loopCheckerAdded = userCode.replace(forLoopRegex, 'for(let loopChecker = 0, ')
+
+    //not working:
+    const secondConditionRegex = /for*(?=\;)/;
+
+    //replace 'for(' ... ';' with 'for(' ... '; loopChecker++ < 1000000 && '
+    console.log('loopCheckerAdded: ', loopCheckerAdded);
+    let index = loopCheckerAdded.match(secondConditionRegex).index;
+    console.log('index: ', index);
   };
 })
 
