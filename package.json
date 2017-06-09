@@ -4,6 +4,12 @@
   "description": "Arnav's personal website",
   "main": "app.js",
   "author": "Arnav Aggarwal",
+  "scripts": {
+    "start": "node server.js --inspect",
+    "start-watch": "nodemon server.js --inspect",
+    "dev": "webpack -d --watch",
+    "prod": "webpack -p"
+  },
   "devDependencies": {
 
   },
